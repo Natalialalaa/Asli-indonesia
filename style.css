@@ -1,0 +1,1486 @@
+/*
+Theme Name: Asli Indonesien
+Author: Priscilla Natalia
+Author URI: https://example.com/
+Description: Custom WordPress theme for Asli Indonesien Restaurant.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+Text Domain: asli-indonesien
+*/
+
+:root {
+      --bg-black: #000000;
+      --bg-dark: #1e1e1e;
+      --bg-darkgreen: #00100b;
+      --bg-mediumgreen: #041E25;
+      --white-text-h1: #ededed;
+      --white-text-h2: #E0D3BE;
+      --white-text-h3: rgb(190, 183, 157);
+      --white-text-p: #fff9ec;
+      --grey-text-a: #3D3D3D;
+      --light-grey-text: #766853;
+      --banner-red: #de3838;
+      --light-golden: #E0D3BE;
+      --golden: #FFDCA4;
+      --dark-golden: #d9b966;
+      --darker-golden: #bfa16c;
+    }
+
+body {
+  background-color: var(--bg-dark);
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: var(--white-text-p);
+}
+
+h1{
+  color: var(--white-text-h1);
+  font-family: "Vidaloka", serif;
+}
+h2 {
+  color: var(--white-text-h2);
+  font-family: "Vidaloka", serif;
+  font-size: 26px;
+}
+
+h3 {
+  color: var(--white-text-h3);
+  font-family: "Lato", sans-serif;
+  margin: unset;
+}
+
+.line-break {
+  width: 1px;
+  height: 60px;
+  background-color: var(--white-text-h2);
+  margin: 50px auto ;
+}
+
+
+
+section {
+  min-height: 400px;
+  padding: 20px;
+  text-align: center;
+}
+
+section.section-model-basic {
+
+  min-height: unset;
+}
+
+.section-instagram-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 400px;
+  width: 100%;
+  padding: 20px 0;
+  gap: 20px;
+}
+
+.section-instagram-wrapper .instagram-media {
+
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .section-instagram-wrapper {
+    max-width: 50px;
+    padding: 10px 0;
+    flex-direction: column;
+  }
+
+}
+
+/*newsletter*/
+/* News Article Card - White & Gold Theme */
+.news-article {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: white;
+  overflow: hidden;
+  border: 1px solid var(--light-golden);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+  margin: 20px auto; /* Center horizontally */
+}
+.news-content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Image */
+.news-image-wrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 2px solid var(--light-golden);
+}
+
+.news-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.news-article:hover .news-image {
+  transform: scale(1.05);
+}
+
+/* Text content */
+.news-text-wrapper {
+  padding: 20px;
+  text-align: left;
+}
+
+.news-title {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: var(--bg-dark);
+}
+
+.news-date {
+  font-size: 0.85rem;
+  color: var(--darker-golden);
+  margin-bottom: 12px;
+
+}
+
+.news-content {
+  font-size: 0.95rem;
+  color: var(--bg-dark);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.news-content > p {
+  font-size: 0.95rem;
+  color: var(--dark-golden);
+}
+
+/* Link Button (Your white & gold theme) */
+.news-link-wrapper {
+  padding: 0 20px 20px;
+}
+
+.news-link {
+  display: inline-block;
+  background-color: var(--light-golden);
+  color: var(--bg-dark);
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.news-link:hover {
+  background-color: var(--bg-dark);
+  color: var(--light-golden);
+}
+
+/* Menu */
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-black);
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding:  20px;
+  background-color: var(--bg-black);
+}
+
+.menu-icon img {
+   width: 20px;
+}
+
+.menu-logo img {
+  width: 50px;
+  height: auto;
+}
+
+.social-icons img {
+  width: 25px;
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-icons a:hover {
+  background-color: var(--light-golden);
+}
+/* Menu PC */
+/* Banner */
+.promo {
+  background-color: var(--banner-red);
+  top: 0;
+  padding: 3px 0;
+  z-index: 1000;
+  position: sticky;
+  overflow: hidden; /* Important to hide scrolling text outside */
+  white-space: nowrap;
+}
+
+.promo-text {
+  color: var(--white-text-h1);
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  display: inline-block;
+  padding-left: 100%; /* Start off-screen */
+  animation: promo-scroll 15s linear infinite; /* Adjust speed */
+}
+
+/* Keyframes for scrolling effect */
+@keyframes promo-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.nav-menu {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-list {
+  
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Ensure WP menu looks like your static menu */
+.menu-list { list-style: none; margin: 0; padding: 0; }
+.menu-list li { margin: 0; padding: 0; }
+.menu-list a { display: block; }
+
+/* If bullets or spacing appear, this kills them */
+.nav-menu ul, .nav-menu li { list-style: none; margin: 0; padding: 0; }
+
+.menu-list a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
+.menu-list a:hover {
+  color: var(--light-golden);
+}
+.menu-icon .open,   .menu-icon .close{
+  display: none;
+}
+
+
+/* Menu Mobile */
+@media (max-width: 600px) {
+ 
+  .nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+
+  .menu-icon .open {
+    display: flex;
+    /*display: none;*/
+    cursor: pointer;
+    padding: 0 15px;
+  }
+
+  .menu-icon .close{
+    /*hide the open icon by default*/
+    display: none;
+    cursor: pointer;
+    padding: 0 15px;
+  }
+
+  .nav-menu {
+    display: none;
+    /*hide the menu by default*/
+    /* display: flex;*/
+    position: sticky;
+    position: absolute;
+    top: 91px;
+    left: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--bg-black);
+    width: 80%;
+    height: calc(100vh - 91px);
+    z-index: 999;
+    justify-content: unset;
+  }
+
+  .menu-list > *, .social-icons{
+    margin-top: 20px;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons {
+  padding: 10px 20px;
+  }
+}
+
+
+/* Homepage, section 1 */
+#hero {
+  background-image: linear-gradient(rgba(1, 1, 1, 0.772), rgba(51, 51, 51, 0.931)), url("src/banner1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: var(--white-text-h1);
+}
+
+.hero-logo {
+  width: 120px;
+}
+
+.hero-title {
+  font-family: "Vidaloka", sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.hero-description {
+  width: 60%;
+  justify-self: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/* Homepage, section 2 */
+#food {
+  background-color: var(--bg-darkgreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.food-description {
+  width: 70%;
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+#food u {
+  text-decoration: underline;
+  color: var(--white-text-h2);
+}
+
+.food-images {
+  position: relative;
+
+}
+
+.food-image {
+  position: absolute;
+  max-width: 180px;
+  height: auto;
+
+}
+
+@media (max-width: 500px) {
+  .food-image {
+    max-width: 150px;
+  }
+}
+
+.food-image:first-of-type {
+  top: 50px;
+  left: 250px;
+}
+
+@media (max-width: 500px) {
+  .food-image:first-of-type { left: 30vw; }
+}
+
+@media (max-width: 350px) {
+  .food-image:first-of-type { left: 100px; }
+}
+
+.food-image:nth-of-type(2) {
+  top: -30px;
+  right: 250px;
+}
+@media (max-width: 500px) {
+  .food-image:nth-of-type(2) { right: 30vw; }
+}
+@media (max-width: 350px) {
+  .food-image:nth-of-type(2) { right: 90px; }
+}
+
+.food-image:nth-of-type(3){
+  max-width: 280px;
+  bottom: -450px;
+  left: -320px;
+}
+
+.food-image:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+/* 3 : about or photo gallery*/
+#about {
+  background-color: var(--bg-mediumgreen);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 50px 0;
+}
+
+
+.about-description {
+  width: 70%;
+  max-width: 400px;
+  margin: 20px auto;
+  color: var(--white-text-p);
+}
+
+
+/* photo gallery */
+/* Gallery Grid */
+.photo-gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("src/songketpattern.png");
+  margin: 50px 0;
+}
+
+.gallery {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 20px;
+  
+}
+
+.gallery .item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit:contain;
+  border-radius: 4px;
+}
+
+/* Slider arrows (hidden by default) */
+.slider-controls {
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  font-size: 2em;
+  cursor: pointer;
+  z-index: 10;
+  
+}
+
+.slider-controls span {
+  color: #E0D3BE;
+  margin: 0 20px ;
+}
+
+/* Small screen: switch to slideshow */
+@media (max-width: 600px) {
+  .gallery {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    gap: unset;
+    padding: unset;
+  }
+
+  .gallery .item {
+    min-width: 100%; /* full width */
+    transition: transform 0.3s;
+  }
+
+  .slider-controls {
+    display: flex; /* show arrows */
+    position: absolute;
+  }
+}
+
+.about-social-icons img {
+  width: 30px;
+  height: auto;
+
+}
+
+/*section 4: contact*/
+#contact {
+  background-image: linear-gradient(rgba(1, 1, 1, 0.772), rgba(51, 51, 51, 0.931)), url("src/resto.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.contact-section__title {
+  width: 70%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+button {
+  background-color: rgba(46, 46, 46, 0.318);
+  color: var(--light-golden);
+  padding: 8px 20px;
+  margin: 5px 10px;
+  border: var(--light-golden) 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  max-width: fit-content;
+}
+
+/* make CF7 submit look like your button */
+.wpcf7 .wpcf7-submit.btn {   background-color: rgba(46, 46, 46, 0.318);
+  color: var(--light-golden);
+  padding: 8px 20px;
+  margin: 5px 10px;
+  border: var(--light-golden) 1px solid;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  max-width: fit-content; }
+
+button:hover {
+  background-color: var(--light-golden);
+  color: var(--bg-dark);
+}
+
+
+/* Footer */
+footer {
+  background-color:var(--bg-black);
+  color: var(--white-text-p);
+  text-align: center;
+  padding: 80px 40px 80px;
+}
+
+footer a {
+  color: whitesmoke;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--white-text-p);
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  color: var(--light-golden);
+}
+
+.footer-logo{
+  margin: 20px;
+}
+
+.footer-logo img{
+  max-width: 60px;
+}
+
+.footer-logo p{
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 8px;
+}
+
+.footer-social-icons img {
+  width: 20px;
+  margin-bottom: 10px;
+}
+
+.divider-break {
+  max-width: 200px;
+  height:1px;
+  background-color: var(--golden);
+  margin: 20px auto ;
+}
+
+.footer-newsletter {
+  color: var(--bg-dark);
+  max-width: fit-content;
+  margin: 20px auto;
+}
+
+.footer-newsletter form {
+  border: #000000 1px solid;
+}
+
+.footer-newsletter form input[type="email"] {
+  max-width: 120px;
+  border: var(--light-golden) 2px solid;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 20px 0;
+}
+.footer-newsletter form input[type="email"]:focus {
+  outline: none;
+  border-color: var(--light-golden);
+}
+/* Section Container common models */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width:400px;
+}
+
+.section-description {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.section-model-basic .section-description li {
+  color: var(--white-text-p);
+}
+
+.section-model-basic--actualite {
+	display:flex;
+	flex-direction: row;
+}
+
+h2.section-title::after {
+  background: var(--white-text-h2);
+  
+}
+
+h3.section-title {
+  color: var(--white-text-h3);
+  font-family: "Lato", sans-serif;
+}
+
+.section-title{
+    margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  width: 100%;
+  position: relative;
+  letter-spacing: 1.2px3
+}
+
+h3.section-title::after {
+  background: var(--white-text-h3);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -8px;
+  width: 12%;
+  height: 2px;
+}
+
+.section-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  max-width: 400px;
+  text-align: left;
+  margin: 40px auto;
+}
+
+
+/*page decos*/
+.deco-1{
+  position: relative;
+  top: -20px;
+}
+
+.deco-flower-1-right  {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.deco-flower-1-left {
+  width: 150px;
+  position: absolute;
+  left: 10px;
+}
+
+.deco-2{
+  position: relative;
+  top: -20px;
+}
+
+.deco-flower-2-right  {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.deco-flower-2-left {
+  width: 150px;
+  position: absolute;
+  left: 10px;
+  top: -30px;
+}
+/* Page le restaurant */
+
+.restaurant-gallery {
+    overflow: hidden;
+    width: 100%;
+}
+
+.scroll-content {
+    display: flex;
+    /* Animation will be applied via JS */
+}
+
+.scroll-content img {
+    width: 300px;
+    flex-shrink: 0;
+    padding: 0 10px; /* Avoid gaps between looped sets */
+}
+
+/*l'équipe*/
+.team-members {
+  background-image: linear-gradient(rgba(30,30,30,0.2), rgba(30,30,30,0.6)), url("src/songketpattern.png");
+  background-size:cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+}
+.team-member img{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  max-width: 150px;
+}
+
+.team-member-name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.team-member-role {
+  font-size: 12px;
+}
+
+
+.info-hours-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.info-hours {
+  padding: 0 auto 20px;
+
+}
+
+.info-hours span.day{
+  color: var(--dark-golden);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.info-hours li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  list-style: none;
+  margin: 10px auto;
+  font-family: 'Lato', sans-serif;
+  flex-direction: row;
+
+  gap: 50px;
+}
+
+.info-hours span.hours {
+  color: var(--light-golden);
+  font-size: 12px;
+  text-align: end;
+}
+
+.note-horaire {
+  margin-top: 40px;
+  color: rgb(162, 160, 160);
+  font-size: 9px;
+  width: 200px;
+}
+
+
+/*L'adresse*/
+
+.map-container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px auto;
+
+}
+
+@media (max-width: 700px) {
+.map-container {
+  flex-direction: column;
+}
+
+}
+
+.google-map iframe {
+  width: 100%;
+  height: 350px;
+  box-sizing: border-box;
+}
+
+
+
+.location-transport {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  padding: 20px;
+}
+
+.location-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-transport li {
+  margin: 5px 10px;
+  display: flex;
+}
+
+.location-transport li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.location-transport p {
+  margin: 5px 10px;
+  display: flex;
+}
+
+.line-number {
+  font-weight: bold;
+  font-size: 14px;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  &.line-number--red {
+    background-color: var(--banner-red);
+  }
+  &.line-number--blue {
+    background-color: rgb(74, 190, 216);
+  }
+}
+
+
+
+/* Menu */
+.menu-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-labels img {
+  width: 35px;
+  height: auto;
+}
+
+.menu-allergen-warning  {
+  color: var(--white-text-h3);
+  font-size: 12px;
+  text-align: left;
+  font-family: "Lato", sans-serif;
+}
+
+.menu-labels {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+}
+
+.menu-labels span {
+  color: var(--white-text-h3);
+  display: flex;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-delivery-logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-delivery-logos img {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-delivery-logos img:hover {
+  transform: scale(1.1);
+}
+
+
+/* MENU TITLE TEXT */
+section.menu-gallery {
+  padding: 50px 20px 50px;
+  min-height: unset;
+}
+
+.menu-gallery-header-wrapper {
+  width: 100%;
+}
+
+.menu-gallery-header {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+
+}
+
+@media (max-width: 600px) {
+  .menu-gallery-header-wrapper {
+  width: fit-content;
+}
+  .menu-gallery-header {
+    align-self: flex-start;
+  }
+}
+
+.menu-gallery-header::before {
+  content: "";
+  position: absolute; 
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 130%;
+  height: 1.2em; 
+  background-color: var(--darker-golden); 
+  z-index: -1; 
+}
+
+.menu-gallery-title {
+  position: relative; 
+  color: #f5f0e8;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+
+
+/* MENU GALLERY CARDS STARTS HERE*/
+.menu-gallery-special-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+.menu-gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.menu-gallery-list-boissons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center; /* Center on large screens */
+  scrollbar-width: 20px;
+  scrollbar-color: var(--light-golden) transparent;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* Modern, thin, short scrollbar for Webkit browsers */
+.menu-gallery-list-boissons::-webkit-scrollbar {
+  height: 6px;
+  background: transparent;
+  border-radius: 8px;
+}
+
+.menu-gallery-list-boissons::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, var(--light-golden), var(--golden));
+  border-radius: 8px;
+  min-width: 40px;
+}
+
+.menu-gallery-list-boissons::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+  margin: 8px 40px; /* Shorten scrollbar ends */
+}
+
+@media (max-width: 700px) {
+  .menu-gallery-list-boissons {
+    justify-content: flex-start; /* Left align on small screens */
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}
+
+.menu-item {
+  color: var(--bg-dark);
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: row;
+
+  /* Remove these or it will break layout */
+	/* width: 280px;*/
+  /* background-color: #E0D3BE;*/
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+  /* text-overflow: clip; */
+}
+
+.resto-menu {
+	color: var(--bg-dark);
+    padding: 20px;
+    margin: 10px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    width: 280px;
+    background-color: #E0D3BE;
+}
+
+.menu-item-content {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.menu-item-description-wrapper {
+  max-height: 60px; /* roughly 3 lines */
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.resto-menu.expanded .menu-item-description-wrapper {
+  max-height: 500px; /* enough to show full text */
+}
+
+.menu-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 400px;
+    text-align: left;
+    margin: 40px auto;
+}
+
+.menu-item-description {
+  font-size: 14px;
+  color: var(--light-grey-text);
+  text-align: left;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+}
+
+.resto-menu.expanded .menu-item-description {
+  display: block; /* remove the clamp */
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+
+.menu-item-hover {
+  transform: scale(1.05);
+}
+
+
+.menu-item-image-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.menu-item-boisson-image-wrapper {
+  width: 120px;
+  height: 120px;
+}
+
+.menu-item-boisson-title {
+  color: var(--white-text-h1);
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Position the spicy icon inside the wrapper */
+.icon-spicy {
+  position: absolute;
+  bottom: 5px;      
+  right: 5px;    
+  z-index: 2;   
+  box-shadow: inset -50px -30px 15px rgba(255, 255, 255, 0.522);
+  border-radius: 50%;
+}
+
+.icon-spicy-image {
+  width: 30px;   
+  height: auto;
+}
+
+.icon-vegan {
+  position: absolute;
+  bottom: 5px;      
+  right: 5px;    
+  z-index: 2;   
+  box-shadow: inset -50px -30px 15px rgba(255, 255, 255, 0.522);
+  border-radius: 50%;
+}
+
+.icon-vegan-image {
+  width: 30px;   
+  height: auto;
+}
+
+.menu-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.menu-item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: flex-start;
+
+}
+
+.menu-item-title {
+  color: var(--grey-text-a);
+  font-size: 16px;
+  text-align: left;
+}
+
+.menu-item-price {
+  font-size: 14px;
+  color: var(--light-grey-text);
+}
+.menu-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+/*menu special*/
+
+
+.menu-special-item-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 500px;
+}
+
+.menu-special-item-title {
+  color: var(--white-text-h1);
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.menu-special-image-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-special-item-details
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin : 20px 0 ;
+}
+.menu-special-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu-special-item-price {
+  font-size: 14px;
+  color: var(--white-text-h1);
+}
+.menu-special-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+section.menu-gallery-special {
+  background-color: var(--bg-mediumgreen);
+  padding: 50px ;
+}
+
+.menu-gallery-special-header-wrapper {
+  width: 100%;
+}
+
+.menu-gallery-special-header {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+}
+@media (max-width: 600px) {
+  .menu-gallery-special-header-wrapper {
+    width: fit-content;
+  }
+  .menu-gallery-special-header {
+    align-self: flex-start;
+  }
+}
+.menu-gallery-special-header::before {
+  content: "";
+  position: absolute; 
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 130%;
+  height: 1.2em; 
+  background-color: var(--bg-darkgreen); 
+
+}
+.menu-gallery-special-title {
+  position: relative; 
+  color: var(--white-text-h2);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* form */
+.contact-form {
+  width: 90%;
+  max-width: 400px; /* keeps it elegant on big screens */
+  margin: 0 auto;
+  color: white;
+  font-family: sans-serif;
+}
+
+.contact-form input:not([type="checkbox"]),
+.contact-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #555;
+  color: white;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #0ff; /* teal focus line */
+}
+
+.contact-form textarea {
+  resize: none;
+  min-height: 60px;
+}
+
+.contact-form label {
+  color: #ffffff;
+  font-size: 12px;
+  display: flex;
+  margin-bottom: 8px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.contact-form a {
+  color: #00e0e0;
+  text-decoration: none;
+  padding-left: 5px;
+}
+
+.contact-form a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Responsive tweaks for very small screens */
+@media (max-width: 480px) {
+  .contact-form {
+    width: 95%;
+  }
+}
+
+/* plugins editing */
+.sb-feed-header  {
+	display :none;
+}
+
+
